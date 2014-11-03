@@ -8,6 +8,7 @@ Reads RSS feeds and sends new items as HipChat alerts.
 1. Clone repository
 2. Run `composer install`
 3. Copy `config.yml.dist` to `config.yml` and adjust to your needs
+4. Create a folder `./cache` and make sure it has write permissions
 
 ### Usage
 
