@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Astina\Feed2HipChat;
 
 use Guzzle\Http\Client;
 use HipChat\HipChat;
@@ -23,7 +23,7 @@ class CheckFeedCommand extends Command
             ->setName('feed:check')
             ->addArgument('url', InputArgument::REQUIRED, 'Feed URL')
             ->addOption('application', null, InputOption::VALUE_OPTIONAL, 'Name of the monitored application (name displayed in HipChat channel)', 'RSS Feed')
-            ->addOption('config', 'c', InputOption::VALUE_OPTIONAL, 'Config file', __DIR__ . '/../../config.yml')
+            ->addOption('config', 'c', InputOption::VALUE_OPTIONAL, 'Config file', __DIR__ . '/../../../config.yml')
         ;
     }
 
@@ -51,7 +51,7 @@ class CheckFeedCommand extends Command
 
     private function loadConfig($file)
     {;
-        $this->config = Yaml::parse($file) + array('cache_dir' => __DIR__ . '/../../cache');
+        $this->config = Yaml::parse($file) + array('cache_dir' => __DIR__ . '/../../../cache');
     }
 
     private function fetchItems($feedUrl)
