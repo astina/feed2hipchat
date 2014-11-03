@@ -1,4 +1,9 @@
 {
+    "name": "astina/feed2hipchat",
+    "description": "Reads RSS feeds and sends new items as HipChat alerts.",
+    "keywords": ["rss", "feed", "hipchat"],
+    "homepage": "https://github.com/astina/feed2hipchat",
+    "license": "MIT",
     "autoload": {
         "psr-0": { "": "src/" }
     },
